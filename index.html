@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #000000;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      animation: bounce 2s infinite;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background-color: #ff6b6b;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+      bottom: -100px;
+      animation: float 8s infinite ease-in;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: #333;
+    }
+
+    .balloon:nth-child(2) {
+      left: 20%;
+      background: #48dbfb;
+      animation-duration: 10s;
+    }
+
+    .balloon:nth-child(3) {
+      left: 40%;
+      background: #feca57;
+      animation-duration: 12s;
+    }
+
+    .balloon:nth-child(4) {
+      left: 60%;
+      background: #5f27cd;
+      animation-duration: 9s;
+    }
+
+    .balloon:nth-child(5) {
+      left: 80%;
+      background: #1dd1a1;
+      animation-duration: 11s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-120vh); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .message {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeIn 3s forwards 2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday, Annie! 🎉</h1>
+  <p class="message">Wishing you joy, love, and happiness today and always!</p>
+
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+</body>
+</html>
+
